@@ -3,11 +3,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DriversManagement.API.Data;
 
-public class DriversContext : DbContext
+public class MariaDbContext : DbContext
 {
-    public DriversContext(DbContextOptions<DriversContext> options) : base(options)
+    public MariaDbContext(DbContextOptions<MariaDbContext> options)
+        : base(options)
     {
     }
 
-    public DbSet<Driver> Drivers { get; set; }
+    public DbSet<Driver> Drivers { get; set; } 
 }
